@@ -1,0 +1,374 @@
+/* Resetting margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting base font size */
+html {
+  font-size: 62.5%;
+}
+
+/* Defining CSS variables for easy color management */
+:root {
+  --color-white: #fff;
+  --nav-bg: #191919;
+  --btn-color: #be3144;
+  --contact-bg: #303841;
+  --gray-color: #ccc;
+}
+
+/* Body styling */
+body {
+  font-family: "Arial", sans-serif;
+}
+
+/* Anchor Styling */
+a {
+  text-decoration: none;
+}
+
+/* List Styling */
+li {
+  list-style-type: none;
+}
+
+/* Container Styling */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: .5rem 3rem;
+}
+
+/* *** Nav Container Styling *** */
+.nav-container {
+  max-width: 100vw;
+  height: 6rem;
+  background-color: var(--nav-bg);
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.logo {
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.logo-link {
+  color: var(--color-white);
+  padding: 0 1.5rem 0 .5rem;
+}
+
+/* Search Styling */
+.search-bar {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 1rem 0 0;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  height: 4rem;
+  outline: none;
+  border: none;
+  border-radius: 2.5rem;
+  padding: .2rem 5rem .2rem 1.5rem;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+}
+
+.search-icon {
+  position: absolute;
+  top: .4rem;
+  right: .4rem;
+  width: 6rem;
+  height: 3.2rem;
+  border-radius: 2.5rem;
+  background-color: var(--nav-bg);
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+/* List Styling */
+.nav-list {
+  display: flex;
+  height: 5rem;
+  width: 27rem;
+}
+
+.nav-li {
+  width: 9rem;
+  border: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border: .1rem solid var(--color-white);
+  }
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+/* *** Main Container *** */
+.main-container {
+  max-width: 100vw;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+.ws-img {
+  width: 100%;
+  height: 100vh;
+}
+
+.ws-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 70rem;
+  min-width: 30rem;
+  border: .2rem solid var(--color-white);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.ws-title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--btn-color);
+  margin-bottom: 1rem;
+}
+
+.ws-title strong {
+  font-size: 2.7rem;
+  color: var(--color-white);
+}
+
+.ws-para {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: .07rem;
+  word-spacing: .05rem;
+  font-weight: 900;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+
+.ws-para strong {
+  color: var(--btn-color);
+  font-size: 2rem;
+}
+
+.ws-btn {
+  padding: 1rem 2rem;
+  background-color: var(--btn-color);
+  border: none;
+  color: var(--color-white);
+  outline: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: all .3s ease-out;
+
+  &:hover {
+    background-color: #e33e54;
+  }
+}
+
+.ws-btn-portfolio {
+  color: var(--color-white);
+  letter-spacing: .08rem;
+}
+
+/* *** Project Container *** */
+.project-container {
+  height: auto;
+  padding: .5rem 3rem;
+  margin-bottom: 3rem;
+  background-color: var(--color-white);
+}
+
+.content {
+  max-width: 85rem;
+  margin: 0 auto 2rem auto;
+  padding: 1rem;
+}
+
+.heading {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.para {
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: .07rem;
+  word-spacing: .05rem;
+}
+
+.project-show {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.ps-details {
+  height: 38rem;
+  overflow: hidden;
+  background-color: var(--btn-color);
+
+  &:hover {
+    background-color: #e33e54;
+  }
+}
+
+.project-tile img {
+  width: 100%;
+  height: 33rem;
+}
+
+.ps-para {
+  height: 5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* *** Contact Container *** */
+.contact-container {
+  height: auto;
+  border-bottom: .2rem solid var(--gray-color);
+  background-color: var(--contact-bg);
+}
+
+.c-content {
+  color: var(--color-white);
+  padding-top: 2rem;
+}
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem 0;
+  height: 8rem;
+}
+
+.c-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-size: 1.8rem;
+  color: var(--color-white);
+  padding: 1rem;
+}
+
+.cl-icons {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--gray-color);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cl-icon {
+  font-size: 2rem;
+  color: var(--nav-bg);
+}
+
+.footer {
+  height: 5rem;
+  background-color: var(--contact-bg);
+  text-align: center;
+  color: var(--color-white);
+}
+
+.footer-link {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  gap: .5rem;
+  color: var(--color-white);
+  padding: 1.7rem;
+}
+
+/* Max Width 768px */
+@media (max-width: 768px) {
+  .nav-container {
+    display: grid;
+    text-align: center;
+    height: 15rem;
+  }
+
+  .nav-list {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-li:hover {
+    border: none;
+  }
+
+  .ws-content {
+    margin-top: 5rem;
+  }
+
+  .project-show {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .ps-details {
+    height: 27rem;
+  }
+
+  .project-tile img {
+    height: 22rem;
+  }
+
+  .contact-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    height: auto;
+
+  }
+
+  .c-link {
+    justify-content: start;
+  }
+}

@@ -1,0 +1,156 @@
+/* Resetting margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting base font size */
+html {
+  font-size: 62.5%;
+  font-family: "Arial", sans-serif;
+}
+
+/* Styles for anchor tags */
+a {
+  text-decoration: none;
+}
+
+/* Container Styles */
+.container {
+  max-width: 100%;
+  display: flex;
+}
+
+/* Navbar Styles */
+.navbar {
+  width: 30rem;
+  height: 100vh;
+  border: .2rem solid black;
+  overflow: auto;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+/* Navbar Title Styles */
+.navbar-title {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Styles for list items in the navbar */
+.nav-li {
+  border-top: .2rem solid black;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+/* Hover effect for navigation items */
+.nav-li:hover {
+  background-color: #ccc;
+}
+
+/* Styles for navigation links */
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 4.2rem;
+  padding: 0 0 0 2.5rem;
+  color: black;
+  font-size: 1.7rem;
+}
+
+/* Change link color on list item hover */
+.nav-li:hover .nav-link {
+  color: #c12020;
+}
+
+/* Main Styles */
+.main {
+  padding: 3rem;
+  margin-left: 30rem;
+}
+
+/* Header Styles */
+.header {
+  font-size: 3rem;
+}
+
+/* Styles for paragraph elements */
+.ms-para {
+  font-size: 1.6rem;
+  margin: 1.6rem;
+  line-height: 1.6;
+}
+
+/* Styles for unordered lists */
+.ms-ul {
+  margin: 1.6rem 0;
+  padding-left: 5rem;
+}
+
+/* Styles for list items */
+.ms-li {
+  font-size: 1.6rem;
+  margin: 1.6rem 0;
+  line-height: 1.6;
+}
+
+/* Styles for code blocks */
+.code {
+  max-width: 100%;
+  background-color: #ccc;
+  display: block;
+  margin: 1rem;
+  padding: 1.6rem;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  border-radius: .5rem;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 700px) {
+  .container {
+    display: grid;
+  }
+
+  .navbar {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-bottom: .2rem solid black;
+    overflow: unset;
+    position: unset;
+  }
+
+  .nav-ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    padding: 3rem;
+  }
+
+  .nav-link {
+    padding: 0 1rem;
+    font-size: 1.6rem;
+  }
+
+  .main {
+    padding: 1.5rem 1rem;
+    margin-left: 0rem;
+  }
+
+  .header {
+    font-size: 2.4rem;
+  }
+
+  .ms-para {
+    margin: 1rem;
+  }
+
+  .ms-ul {
+    padding-left: 3rem;
+  }
+}
